@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "covid-dev-siri-adf"
+		},
+		"ls_adls_covidreportingdl_accountKey": {
+			"value": ""
+		},
+		"ls_asa_covidreportingsa_connectionString": {
+			"value": ""
+		},
+		"ls_adls_covidreportingdl_properties_typeProperties_url": {
+			"value": "https://covidadlssiri.dfs.core.windows.net"
+		},
+		"ls_http_ecdc_properties_typeProperties_url": {
+			"value": "@{linkedService().BaseURL}"
+		},
+		"tr_publish_daily_properties_typeProperties_scope": {
+			"value": "/subscriptions/687a2311-cbea-4726-a4b1-d9fd9b83a0c0/resourceGroups/covidanalytics-siri-rg/providers/Microsoft.Storage/storageAccounts/covidstrorageacountsiri"
+		}
+	}
+}

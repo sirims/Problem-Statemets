@@ -1,6 +1,7 @@
 {
 	"name": "pl_ingest_population_data",
 	"properties": {
+		"description": "This is my pipeline",
 		"activities": [
 			{
 				"name": "Check if File Exists",

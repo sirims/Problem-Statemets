@@ -744,7 +744,7 @@
 								"datasetParameters": {
 									"casesdeaths": {
 										"filename": {
-											"value": "@pipeline().DataFactory",
+											"value": "cases_deaths.csv",
 											"type": "Expression"
 										}
 									},

@@ -1,0 +1,17 @@
+{
+	"name": "tr_country_responce",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Hour",
+				"interval": 24,
+				"startTime": "2021-09-03T11:30:00Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}

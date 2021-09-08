@@ -1,0 +1,172 @@
+{
+	"name": "pl_ingest_population_data",
+	"properties": {
+		"activities": [
+			{
+				"name": "Check if File Exists",
+				"type": "Validation",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "ds_population_raw_gz",
+						"type": "DatasetReference"
+					},
+					"timeout": "0.00:00:59",
+					"sleep": 10
+				}
+			},
+			{
+				"name": "validate-column-count",
+				"type": "GetMetadata",
+				"dependsOn": [
+					{
+						"activity": "Check if File Exists",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "ds_population_raw_gz",
+						"type": "DatasetReference"
+					},
+					"fieldList": [
+						"columnCount"
+					],
+					"storeSettings": {
+						"type": "AzureBlobStorageReadSettings",
+						"recursive": true,
+						"enablePartitionDiscovery": false
+					},
+					"formatSettings": {
+						"type": "DelimitedTextReadSettings"
+					}
+				}
+			},
+			{
+				"name": "check column count",
+				"type": "IfCondition",
+				"dependsOn": [
+					{
+						"activity": "validate-column-count",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"expression": {
+						"value": "@equals(activity('validate-column-count').output.columnCount,13)",
+						"type": "Expression"
+					},
+					"ifTrueActivities": [
+						{
+							"name": "copy population data",
+							"type": "Copy",
+							"dependsOn": [],
+							"policy": {
+								"timeout": "0.04:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"source": {
+									"type": "DelimitedTextSource",
+									"storeSettings": {
+										"type": "AzureBlobStorageReadSettings",
+										"recursive": true,
+										"enablePartitionDiscovery": false
+									},
+									"formatSettings": {
+										"type": "DelimitedTextReadSettings"
+									}
+								},
+								"sink": {
+									"type": "DelimitedTextSink",
+									"storeSettings": {
+										"type": "AzureBlobFSWriteSettings"
+									},
+									"formatSettings": {
+										"type": "DelimitedTextWriteSettings",
+										"quoteAllText": true,
+										"fileExtension": ".txt"
+									}
+								},
+								"enableStaging": false,
+								"translator": {
+									"type": "TabularTranslator",
+									"typeConversion": true,
+									"typeConversionSettings": {
+										"allowDataTruncation": true,
+										"treatBooleanAsNumber": false
+									}
+								}
+							},
+							"inputs": [
+								{
+									"referenceName": "ds_population_raw_gz",
+									"type": "DatasetReference"
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "ds_population_raw_tsv",
+									"type": "DatasetReference"
+								}
+							]
+						},
+						{
+							"name": "Deletesourcefile",
+							"type": "Delete",
+							"dependsOn": [
+								{
+									"activity": "copy population data",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								}
+							],
+							"policy": {
+								"timeout": "7.00:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"dataset": {
+									"referenceName": "ds_population_raw_gz",
+									"type": "DatasetReference"
+								},
+								"enableLogging": false,
+								"storeSettings": {
+									"type": "AzureBlobStorageReadSettings",
+									"recursive": true,
+									"enablePartitionDiscovery": false
+								}
+							}
+						}
+					]
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2021-09-02T09:04:26Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

@@ -1,0 +1,17 @@
+{
+	"name": "tr_cases_deaths",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Hour",
+				"interval": 24,
+				"startTime": "2021-09-03T10:30:00",
+				"timeZone": "GMT Standard Time"
+			}
+		}
+	}
+}

@@ -1,0 +1,20 @@
+{
+	"name": "ds_Ecdc_File_list",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_asa_covidreportingsa",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "ecdc_file_list.json",
+				"container": "data1"
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

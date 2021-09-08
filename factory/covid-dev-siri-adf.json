@@ -1,0 +1,9 @@
+{
+	"name": "covid-dev-siri-adf",
+	"location": "uksouth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "ad3deca0-91e6-4668-ba5e-8e2e49f6d84b",
+		"tenantId": "c6ebeac6-414b-4cd6-b236-ab75fc905b80"
+	}
+}

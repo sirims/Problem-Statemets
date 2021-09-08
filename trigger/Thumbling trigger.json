@@ -1,0 +1,25 @@
+{
+	"name": "Thumbling trigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipeline": {
+			"pipelineReference": {
+				"referenceName": "pl_ingest_population_data",
+				"type": "PipelineReference"
+			}
+		},
+		"type": "TumblingWindowTrigger",
+		"typeProperties": {
+			"frequency": "Minute",
+			"interval": 5,
+			"startTime": "2021-09-02T10:30:00Z",
+			"delay": "00:00:00",
+			"maxConcurrency": 50,
+			"retryPolicy": {
+				"intervalInSeconds": 30
+			},
+			"dependsOn": []
+		}
+	}
+}

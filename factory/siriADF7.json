@@ -1,0 +1,9 @@
+{
+	"name": "siriADF7",
+	"location": "uksouth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "cbeda519-417c-49d4-9a4c-2b4836ccd873",
+		"tenantId": "c6ebeac6-414b-4cd6-b236-ab75fc905b80"
+	}
+}

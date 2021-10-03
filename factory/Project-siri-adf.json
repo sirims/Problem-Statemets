@@ -1,0 +1,9 @@
+{
+	"name": "Project-siri-adf",
+	"location": "uksouth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "95175cc1-9875-4e15-8890-a47a7e3e7599",
+		"tenantId": "f2b06e59-9597-4d35-9d55-678849e1450e"
+	}
+}

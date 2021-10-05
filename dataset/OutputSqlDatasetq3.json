@@ -1,0 +1,16 @@
+{
+	"name": "OutputSqlDatasetq3",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabaseLinkedService3rdq",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "outlets"
+		}
+	}
+}

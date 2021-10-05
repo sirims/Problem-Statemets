@@ -1,5 +1,5 @@
 {
-	"name": "pipeline2",
+	"name": "question4",
 	"properties": {
 		"activities": [
 			{
@@ -76,7 +76,10 @@
 								},
 								"sink": {
 									"type": "AzureSqlSink",
-									"preCopyScript": "TRUNCATE TABLE dbo.@{item().SQLTable}",
+									"preCopyScript": {
+										"value": "TRUNCATE TABLE dbo.@{item().SQLTable}",
+										"type": "Expression"
+									},
 									"disableMetricsCollection": false
 								},
 								"enableStaging": false,

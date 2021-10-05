@@ -1,9 +1,9 @@
 {
-	"name": "question1",
+	"name": "question3",
 	"properties": {
 		"activities": [
 			{
-				"name": "CopyFromBlobtoSqlQ3",
+				"name": "CopyFromBlobtoSql",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -41,13 +41,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "SourceBlodDataset",
+						"referenceName": "SourceBlobDataset",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "OutputSqlDataset",
+						"referenceName": "OutputSqlDatasetq3",
 						"type": "DatasetReference"
 					}
 				]

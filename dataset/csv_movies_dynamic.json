@@ -5,24 +5,32 @@
 			"referenceName": "AzureBlobLinkservice",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"FolderName": {
+				"type": "string"
+			},
+			"DelimiterSymbol": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"folderPath": {
+					"value": "@dataset().FolderName",
+					"type": "Expression"
+				},
 				"container": "movie-q4"
 			},
-			"columnDelimiter": ",",
+			"columnDelimiter": {
+				"value": "@dataset().DelimiterSymbol",
+				"type": "Expression"
+			},
 			"escapeChar": "\\",
 			"quoteChar": "\""
 		},
-		"schema": [
-			{
-				"type": "String"
-			},
-			{
-				"type": "String"
-			}
-		]
+		"schema": []
 	}
 }

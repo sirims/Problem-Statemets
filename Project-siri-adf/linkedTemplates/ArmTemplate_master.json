@@ -15,6 +15,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
 		},
+		"AzureBlobStorageQ2_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorageQ2'"
+		},
 		"AzureSqlDatabaseLinkedService_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabaseLinkedService'"
@@ -27,6 +31,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabaseLinkedServiceQ3'"
 		},
+		"AzureSqlDatabaseSourceq2_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabaseSourceq2'"
+		},
 		"AzureStorageLinkService_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureStorageLinkService'"
@@ -34,6 +42,10 @@
 		"AzureStorageLinkedService_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureStorageLinkedService'"
+		},
+		"AzureSynapseAnalyticsSinkQ2_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSynapseAnalyticsSinkQ2'"
 		},
 		"Blob_MssqlTips_connectionString": {
 			"type": "secureString",
@@ -102,8 +114,8 @@
 					"AzureBlobStorage1_connectionString": {
 						"value": "[parameters('AzureBlobStorage1_connectionString')]"
 					},
-					"AzureSqlDatabaseLinkedService_connectionString": {
-						"value": "[parameters('AzureSqlDatabaseLinkedService_connectionString')]"
+					"AzureBlobStorageQ2_connectionString": {
+						"value": "[parameters('AzureBlobStorageQ2_connectionString')]"
 					},
 					"ls_adls_covidreportingdl_properties_typeProperties_url": {
 						"value": "[parameters('ls_adls_covidreportingdl_properties_typeProperties_url')]"
@@ -129,17 +141,26 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"AzureSqlDatabaseLinkedService_connectionString": {
+						"value": "[parameters('AzureSqlDatabaseLinkedService_connectionString')]"
+					},
 					"AzureSqlDatabaseLinkedService3rdq_connectionString": {
 						"value": "[parameters('AzureSqlDatabaseLinkedService3rdq_connectionString')]"
 					},
 					"AzureSqlDatabaseLinkedServiceQ3_connectionString": {
 						"value": "[parameters('AzureSqlDatabaseLinkedServiceQ3_connectionString')]"
 					},
+					"AzureSqlDatabaseSourceq2_connectionString": {
+						"value": "[parameters('AzureSqlDatabaseSourceq2_connectionString')]"
+					},
 					"AzureStorageLinkService_connectionString": {
 						"value": "[parameters('AzureStorageLinkService_connectionString')]"
 					},
 					"AzureStorageLinkedService_connectionString": {
 						"value": "[parameters('AzureStorageLinkedService_connectionString')]"
+					},
+					"AzureSynapseAnalyticsSinkQ2_connectionString": {
+						"value": "[parameters('AzureSynapseAnalyticsSinkQ2_connectionString')]"
 					},
 					"Blob_MssqlTips_connectionString": {
 						"value": "[parameters('Blob_MssqlTips_connectionString')]"

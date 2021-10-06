@@ -11,6 +11,9 @@
 		"AzureBlobStorage1_connectionString": {
 			"value": ""
 		},
+		"AzureBlobStorageQ2_connectionString": {
+			"value": ""
+		},
 		"AzureSqlDatabaseLinkedService_connectionString": {
 			"value": ""
 		},
@@ -20,10 +23,16 @@
 		"AzureSqlDatabaseLinkedServiceQ3_connectionString": {
 			"value": ""
 		},
+		"AzureSqlDatabaseSourceq2_connectionString": {
+			"value": ""
+		},
 		"AzureStorageLinkService_connectionString": {
 			"value": ""
 		},
 		"AzureStorageLinkedService_connectionString": {
+			"value": ""
+		},
+		"AzureSynapseAnalyticsSinkQ2_connectionString": {
 			"value": ""
 		},
 		"Blob_MssqlTips_connectionString": {

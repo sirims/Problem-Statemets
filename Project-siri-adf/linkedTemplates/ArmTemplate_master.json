@@ -31,6 +31,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabaseLinkedServiceQ3'"
 		},
+		"AzureSqlDatabaseLinkedServiceQ5_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabaseLinkedServiceQ5'"
+		},
 		"AzureSqlDatabaseSourceq2_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabaseSourceq2'"
@@ -42,6 +46,10 @@
 		"AzureStorageLinkedService_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureStorageLinkedService'"
+		},
+		"AzureStorageLinkedServiceQ5_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureStorageLinkedServiceQ5'"
 		},
 		"AzureSynapseAnalyticsSinkQ2_connectionString": {
 			"type": "secureString",
@@ -150,6 +158,9 @@
 					"AzureSqlDatabaseLinkedServiceQ3_connectionString": {
 						"value": "[parameters('AzureSqlDatabaseLinkedServiceQ3_connectionString')]"
 					},
+					"AzureSqlDatabaseLinkedServiceQ5_connectionString": {
+						"value": "[parameters('AzureSqlDatabaseLinkedServiceQ5_connectionString')]"
+					},
 					"AzureSqlDatabaseSourceq2_connectionString": {
 						"value": "[parameters('AzureSqlDatabaseSourceq2_connectionString')]"
 					},
@@ -158,6 +169,9 @@
 					},
 					"AzureStorageLinkedService_connectionString": {
 						"value": "[parameters('AzureStorageLinkedService_connectionString')]"
+					},
+					"AzureStorageLinkedServiceQ5_connectionString": {
+						"value": "[parameters('AzureStorageLinkedServiceQ5_connectionString')]"
 					},
 					"AzureSynapseAnalyticsSinkQ2_connectionString": {
 						"value": "[parameters('AzureSynapseAnalyticsSinkQ2_connectionString')]"

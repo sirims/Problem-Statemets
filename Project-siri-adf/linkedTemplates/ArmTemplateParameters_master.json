@@ -23,6 +23,9 @@
 		"AzureSqlDatabaseLinkedServiceQ3_connectionString": {
 			"value": ""
 		},
+		"AzureSqlDatabaseLinkedServiceQ5_connectionString": {
+			"value": ""
+		},
 		"AzureSqlDatabaseSourceq2_connectionString": {
 			"value": ""
 		},
@@ -30,6 +33,9 @@
 			"value": ""
 		},
 		"AzureStorageLinkedService_connectionString": {
+			"value": ""
+		},
+		"AzureStorageLinkedServiceQ5_connectionString": {
 			"value": ""
 		},
 		"AzureSynapseAnalyticsSinkQ2_connectionString": {

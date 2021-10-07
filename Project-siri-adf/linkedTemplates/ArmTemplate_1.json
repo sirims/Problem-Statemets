@@ -569,10 +569,7 @@
 					"location": {
 						"type": "AzureBlobStorageLocation",
 						"folderPath": "incrementalcopy",
-						"container": {
-							"value": "@CONCAT('Incremental-', pipeline().RunId, '.txt')",
-							"type": "Expression"
-						}
+						"container": "adftutorial"
 					},
 					"columnDelimiter": ",",
 					"escapeChar": "\\",

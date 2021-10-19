@@ -1,0 +1,72 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "DemoADF7"
+		},
+		"AzureBlobLinkservice_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorageQ2_connectionString": {
+			"value": ""
+		},
+		"AzureDataLakeStoragefor movies_accountKey": {
+			"value": ""
+		},
+		"AzureSqlDatabaseLinkedService_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabaseLinkedService3rdq_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabaseLinkedServiceQ3_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabaseLinkedServiceQ5_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabaseSourceq2_connectionString": {
+			"value": ""
+		},
+		"AzureStorageLinkService_connectionString": {
+			"value": ""
+		},
+		"AzureStorageLinkedService_connectionString": {
+			"value": ""
+		},
+		"AzureStorageLinkedServiceQ5_connectionString": {
+			"value": ""
+		},
+		"AzureSynapseAnalyticsSinkQ2_connectionString": {
+			"value": ""
+		},
+		"Blob_MssqlTips_connectionString": {
+			"value": ""
+		},
+		"SqlServerLinkservice_connectionString": {
+			"value": ""
+		},
+		"ls_adls_covidreportingdl_accountKey": {
+			"value": ""
+		},
+		"ls_asa_covidreportingsa_connectionString": {
+			"value": ""
+		},
+		"AzureDataLakeStoragefor movies_properties_typeProperties_url": {
+			"value": "https://projectadls.dfs.core.windows.net"
+		},
+		"ls_adls_covidreportingdl_properties_typeProperties_url": {
+			"value": "https://covidadlssiri.dfs.core.windows.net"
+		},
+		"ls_http_ecdc_properties_typeProperties_url": {
+			"value": "@{linkedService().BaseURL}"
+		},
+		"tr_publish_daily_properties_typeProperties_scope": {
+			"value": "/subscriptions/687a2311-cbea-4726-a4b1-d9fd9b83a0c0/resourceGroups/covidanalytics-siri-rg/providers/Microsoft.Storage/storageAccounts/covidstrorageacountsiri"
+		}
+	}
+}

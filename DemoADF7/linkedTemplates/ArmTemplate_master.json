@@ -1,0 +1,229 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "DemoADF7"
+		},
+		"AzureBlobLinkservice_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobLinkservice'"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
+		},
+		"AzureBlobStorageQ2_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorageQ2'"
+		},
+		"AzureDataLakeStoragefor movies_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStoragefor movies'"
+		},
+		"AzureSqlDatabaseLinkedService_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabaseLinkedService'"
+		},
+		"AzureSqlDatabaseLinkedService3rdq_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabaseLinkedService3rdq'"
+		},
+		"AzureSqlDatabaseLinkedServiceQ3_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabaseLinkedServiceQ3'"
+		},
+		"AzureSqlDatabaseLinkedServiceQ5_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabaseLinkedServiceQ5'"
+		},
+		"AzureSqlDatabaseSourceq2_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabaseSourceq2'"
+		},
+		"AzureStorageLinkService_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureStorageLinkService'"
+		},
+		"AzureStorageLinkedService_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureStorageLinkedService'"
+		},
+		"AzureStorageLinkedServiceQ5_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureStorageLinkedServiceQ5'"
+		},
+		"AzureSynapseAnalyticsSinkQ2_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSynapseAnalyticsSinkQ2'"
+		},
+		"Blob_MssqlTips_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'Blob_MssqlTips'"
+		},
+		"SqlServerLinkservice_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SqlServerLinkservice'"
+		},
+		"ls_adls_covidreportingdl_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_adls_covidreportingdl'"
+		},
+		"ls_asa_covidreportingsa_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_asa_covidreportingsa'"
+		},
+		"AzureDataLakeStoragefor movies_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://projectadls.dfs.core.windows.net"
+		},
+		"ls_adls_covidreportingdl_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://covidadlssiri.dfs.core.windows.net"
+		},
+		"ls_http_ecdc_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "@{linkedService().BaseURL}"
+		},
+		"tr_publish_daily_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/687a2311-cbea-4726-a4b1-d9fd9b83a0c0/resourceGroups/covidanalytics-siri-rg/providers/Microsoft.Storage/storageAccounts/covidstrorageacountsiri"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "DemoADF7_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureBlobLinkservice_connectionString": {
+						"value": "[parameters('AzureBlobLinkservice_connectionString')]"
+					},
+					"AzureBlobStorage1_connectionString": {
+						"value": "[parameters('AzureBlobStorage1_connectionString')]"
+					},
+					"AzureBlobStorageQ2_connectionString": {
+						"value": "[parameters('AzureBlobStorageQ2_connectionString')]"
+					},
+					"AzureDataLakeStoragefor movies_accountKey": {
+						"value": "[parameters('AzureDataLakeStoragefor movies_accountKey')]"
+					},
+					"AzureSqlDatabaseLinkedService_connectionString": {
+						"value": "[parameters('AzureSqlDatabaseLinkedService_connectionString')]"
+					},
+					"AzureSqlDatabaseLinkedService3rdq_connectionString": {
+						"value": "[parameters('AzureSqlDatabaseLinkedService3rdq_connectionString')]"
+					},
+					"AzureSqlDatabaseLinkedServiceQ3_connectionString": {
+						"value": "[parameters('AzureSqlDatabaseLinkedServiceQ3_connectionString')]"
+					},
+					"AzureSqlDatabaseLinkedServiceQ5_connectionString": {
+						"value": "[parameters('AzureSqlDatabaseLinkedServiceQ5_connectionString')]"
+					},
+					"AzureSqlDatabaseSourceq2_connectionString": {
+						"value": "[parameters('AzureSqlDatabaseSourceq2_connectionString')]"
+					},
+					"AzureStorageLinkService_connectionString": {
+						"value": "[parameters('AzureStorageLinkService_connectionString')]"
+					},
+					"AzureStorageLinkedService_connectionString": {
+						"value": "[parameters('AzureStorageLinkedService_connectionString')]"
+					},
+					"AzureStorageLinkedServiceQ5_connectionString": {
+						"value": "[parameters('AzureStorageLinkedServiceQ5_connectionString')]"
+					},
+					"AzureSynapseAnalyticsSinkQ2_connectionString": {
+						"value": "[parameters('AzureSynapseAnalyticsSinkQ2_connectionString')]"
+					},
+					"Blob_MssqlTips_connectionString": {
+						"value": "[parameters('Blob_MssqlTips_connectionString')]"
+					},
+					"SqlServerLinkservice_connectionString": {
+						"value": "[parameters('SqlServerLinkservice_connectionString')]"
+					},
+					"ls_adls_covidreportingdl_accountKey": {
+						"value": "[parameters('ls_adls_covidreportingdl_accountKey')]"
+					},
+					"ls_asa_covidreportingsa_connectionString": {
+						"value": "[parameters('ls_asa_covidreportingsa_connectionString')]"
+					},
+					"AzureDataLakeStoragefor movies_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStoragefor movies_properties_typeProperties_url')]"
+					},
+					"ls_adls_covidreportingdl_properties_typeProperties_url": {
+						"value": "[parameters('ls_adls_covidreportingdl_properties_typeProperties_url')]"
+					},
+					"ls_http_ecdc_properties_typeProperties_url": {
+						"value": "[parameters('ls_http_ecdc_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "DemoADF7_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'DemoADF7_ArmTemplate_0')]"
+			]
+		},
+		{
+			"name": "DemoADF7_ArmTemplate_2",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_2.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"tr_publish_daily_properties_typeProperties_scope": {
+						"value": "[parameters('tr_publish_daily_properties_typeProperties_scope')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'DemoADF7_ArmTemplate_1')]"
+			]
+		}
+	]
+}

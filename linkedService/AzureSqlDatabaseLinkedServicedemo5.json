@@ -1,0 +1,16 @@
+{
+	"name": "AzureSqlDatabaseLinkedServicedemo5",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"connectionString": "integrated security=False;encrypt=True;connection timeout=30;data source=sqlserver5q.database.windows.net;initial catalog=SQldatabase5;user id=adm",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI4YmE3OGJmYy1jNzM3LTRkMGMtOGUyMC1hMTEwYWUyMTg1ODEiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "IR-1",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

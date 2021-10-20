@@ -5,8 +5,12 @@
 		"annotations": [],
 		"type": "AzureSqlDatabase",
 		"typeProperties": {
-			"connectionString": "integrated security=False;encrypt=True;connection timeout=30;data source=project-siri-sqlsvr.database.windows.net;initial catalog=project-siri-sqldb;user id=adm",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJkZmEyZWUyNS1kYjdmLTRiZDgtYTZlMy0xZDlkOGFmZmE0NzkiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"connectionString": "integrated security=False;encrypt=True;connection timeout=30;data source=sqlserver5q.database.windows.net;initial catalog=SQldatabase5;user id=adm",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJlZmExYTVjMi1kNzdjLTQ3YjctOGRiYi04MjhjMTY2ZGEyNDMiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "IR-1",
+			"type": "IntegrationRuntimeReference"
 		}
 	}
 }

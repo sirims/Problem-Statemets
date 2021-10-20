@@ -153,7 +153,10 @@
 							"type": "DateTime"
 						},
 						"TableName": {
-							"value": "@{activity('LookupOldWaterMarkActivity').output.firstRow.TableName}",
+							"value": {
+								"value": "@{activity('LookupOldWaterMarkActivity').output.firstRow.TableName}",
+								"type": "Expression"
+							},
 							"type": "String"
 						}
 					}
